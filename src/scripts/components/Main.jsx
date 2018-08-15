@@ -1,11 +1,20 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Player from "./Player";
-import FullRoster from "./Full-rosters";
-import Schedule from "./Schedule";
-import Home from "./Home";
+import {Player} from "./Player";
+import {FullRoster} from "./Full-rosters";
+import {Schedule} from "./Schedule";
+import {Home} from "./Home";
 
+
+
+
+const Roster = () => (
+    <Switch>
+        <Route exact path="/roster" component={FullRoster} />
+        <Route path="/roster/:number" component={Player} />
+    </Switch>         
+)
 
 export const Main = () => (
     <main>
@@ -15,11 +24,4 @@ export const Main = () => (
             <Route path="/schedule" component={Schedule} />
         </Switch>
     </main>
-)
-
-const Roster = () => (
-    <Switch>
-        <Route exact path="/roster" component={FullRoster} />
-        <Route path="/roster/:number" component={Player} />
-    </Switch>         
 )

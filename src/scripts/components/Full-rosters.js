@@ -1,5 +1,6 @@
 import React from "react";
-import PlayerAPI from "../constans/Player-API";
+import {PlayerAPI} from "../constans/Player-API";
+import { Link } from "react-router-dom";
 // import PropTypes from "prop-types";
 
 export const FullRoster = () => (
